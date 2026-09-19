@@ -2625,10 +2625,11 @@ public class CardEdge extends javacard.framework.Applet {
         if (pubkey_size != PUBKEY_SIZE) {
             ISOException.throwIt(SW_INVALID_PARAMETER);
         }
+        buffer_offset += 2;
+        bytes_left -= 2;
         if (bytes_left < pubkey_size) {
             ISOException.throwIt(SW_INVALID_PARAMETER);
         }
-        buffer_offset += 2;
         if (buffer[buffer_offset] != 0x04) {
             ISOException.throwIt(SW_INVALID_PARAMETER);
         }
