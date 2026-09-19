@@ -579,7 +579,7 @@ public class CardEdge extends javacard.framework.Applet {
         card_label = new byte[MAX_CARD_LABEL_SIZE];
 
         // import from SeedKeeper
-        //trusted_pubkey = new byte[PUBKEY_SIZE];
+        trusted_pubkey = new byte[PUBKEY_SIZE];
         secret_sc_sessionkey = (AESKey) KeyBuilder.buildKey(KeyBuilder.TYPE_AES, KeyBuilder.LENGTH_AES_128, false);
 
         install_step = 2;
